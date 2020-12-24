@@ -1,13 +1,15 @@
 version: "3.9"
 services:
-  web:
+  api_server:
     container_name: apitest
     build: .
     ports:
       - "5000:5000"
     volumes:
       - .:/code
-    # environment:
-    #   FLASK_ENV: development
+    environment:
+      # FLASK_ENV: development
+      FLASK_APP: app.py
+      FLASK_RUN_HOST: 0.0.0.0
   redis:
     image: "redis:alpine"

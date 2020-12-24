@@ -1,6 +1,6 @@
 import requests
 
-api_server = 'http://localhost:5000'
+api_server = 'http://api_server:5000'
 
 def test_add_key():
     test_key = 'test_key1'

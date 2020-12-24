@@ -7,6 +7,9 @@ run:
 	docker-compose up
 
 test:
+	docker-compose run api_server pytest -v /code/tests
+
+test_local:
 	docker exec -t apitest sh -c 'pytest -v /code/tests'
 
 clean:

@@ -37,7 +37,7 @@ def inc_count(key: str):
 
 
 @app.route('/op/add', methods=['POST'])
-def adder():
+def op_adder():
     app.logger.info(f'{request.form}')
     op1, op2 = request.form['op1'], request.form['op2']
     return {'sum': int(op1) + int(op2)}
